@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class Movie extends Component {
   state = {
     results: [],
+    filter: '',
   }
 
   async componentDidMount() {
@@ -13,14 +14,26 @@ class Movie extends Component {
     this.setState(apiJSON)
   }
 
+  handleFilterChange = event => {
+    const filterValue = event.target.value
+    this.setState({ filter: filterValue })
+  }
+
   render() {
+    const filteredMovies = this.state.results.filter(movie =>
+      movie.title.includes(this.state.filter)
+    )
+
     return (
       <>
         <header>
           <h1>Party Like it's 1989!</h1>
         </header>
+        <section>
+          <input onChange={this.handleFilterChange} />
+        </section>
         <main>
-          {this.state.results.map(movie => (
+          {filteredMovies.map(movie => (
             <div className="movie">
               <ul>
                 <li className="headline">

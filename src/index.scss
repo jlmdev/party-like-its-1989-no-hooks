@@ -17,8 +17,18 @@ body {
 header {
   display: flex;
   justify-content: center;
+  text-align: center;
   font-family: 'Press Start 2P', cursive;
   color: hsl(60, 80, 70);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  font-family: 'Press Start 2P', cursive;
 }
 
 .headline {

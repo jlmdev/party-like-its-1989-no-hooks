@@ -27,12 +27,15 @@ header {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
   padding-left: 5%;
 }
 
 .headline img {
   padding-right: 5%;
+  width: 92px;
+  height: 138px;
 }
 
 .movie {
@@ -72,4 +75,22 @@ header {
 main {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+@media all and (min-width: 650px) and (max-width: 999px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 1000px) and (max-width: 1350px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 1351px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

@@ -51,11 +51,18 @@ input {
 .movie {
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
+  padding: 10px;
   font-family: 'Press Start 2P', cursive;
   border: 1px solid hsl(120, 75, 10);
   border-radius: 8px;
   background-color: hsl(60, 80, 70);
+  margin: 5px;
+}
+
+.movie:hover {
+  box-shadow: 0 0 30px 2px hsl(60, 80, 70);
+  transform: translateY(-2px);
+  background-color: rgb(212, 226, 21);
 }
 
 .movie ul {
@@ -85,7 +92,7 @@ input {
 main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 10px;
+  grid-gap: 15px;
 }
 
 @media all and (min-width: 650px) and (max-width: 999px) {
